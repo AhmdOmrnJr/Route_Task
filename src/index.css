@@ -1,0 +1,5 @@
+table tbody tr td div.d-flex:hover div{
+    background-color:rgb(62, 221, 62);
+    transition: .5s;
+}
+
