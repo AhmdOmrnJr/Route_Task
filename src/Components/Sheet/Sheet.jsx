@@ -17,7 +17,7 @@ export default function Sheet() {
 
     async function getData() {
         try {
-            const { data: customerData } = await axios.get('https://raw.githubusercontent.com/AhmdOmrnJr/Task/master/Data/db.json');
+            const { data: customerData } = await axios.get('https://ahmdomrnjr.github.io/JsonFile/db.json');
             const { customers, transactions } = customerData;
             setCustomers(customers);
             setTransactions(transactions);
