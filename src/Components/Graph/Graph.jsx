@@ -18,8 +18,7 @@ const Graph = ({ customerId }) => {
     const getData = async () => {
         try {
             const { data } = await axios.get('https://my-json-server.typicode.com/ahmdomrnjr/jsonfile/db');
-            const { transactions } = data;
-            setTransactions(transactions);
+            setTransactions(data.transactions);
         } catch (error) {
             console.error('Error fetching data:', error);
         }

@@ -17,11 +17,10 @@ export default function Sheet() {
 
     async function getData() {
         try {
-            const { data: customerData } = await axios.get('https://my-json-server.typicode.com/ahmdomrnjr/jsonfile/db');
-            const { customers, transactions } = customerData;
-            setCustomers(customers);
-            setTransactions(transactions);
-            console.log(customers, transactions);
+            const { data } = await axios.get('https://my-json-server.typicode.com/ahmdomrnjr/jsonfile/db');
+            setCustomers(data.customers);
+            setTransactions(data.transactions);
+            console.log(data.customers, data.transactions);
         } catch (error) {
             console.error('Error fetching data:', error);
         }
